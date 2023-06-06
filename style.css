@@ -8,6 +8,18 @@ input {
   width: 12%;
 }
 
-.button {
-  margin-top: 20px;
+#addButton {
+  width: 4%;
+  background-color: #fff;
+}
+
+#books ul li{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+button {
+  width: 5%;
+  font-size: 12px;
 }

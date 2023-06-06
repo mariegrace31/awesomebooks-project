@@ -1,3 +1,6 @@
+// script.js
+// Awesome Books
+
 // Array to store the books
 let books = [];
 
@@ -30,8 +33,7 @@ function removeBook(index) {
 }
 
 /**
-//
-* Function to display the books in the UI.
+ * Function to display the books in the UI.
  */
 function displayBooks() {
   const booksDiv = document.getElementById("books");
@@ -56,10 +58,8 @@ function displayBooks() {
 
     booksDiv.appendChild(ul);
   }
-  let hr = document.createElement ("hr");
-      booksDiv.appendChild(hr);
-      
 }
+
 /**
  * Function to update the stored books in local storage.
  */

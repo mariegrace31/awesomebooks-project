@@ -30,32 +30,11 @@ function removeBook(index) {
 }
 
 /**
- * Function to display the books in the UI.
- */
-function displayBooks() {
-  const booksDiv = document.getElementById("books");
-  booksDiv.innerHTML = "";
 
-  if (books.length === 0) {
-    booksDiv.innerHTML = "<p>No books found.</p>";
-  } else {
-    const ul = document.createElement("ul");
 
-    books.forEach((book, index) => {
-      const li = document.createElement("li");
-      li.textContent = `${book.title} by ${book.author}`;
+//
 
-      const removeBtn = document.createElement("button");
-      removeBtn.textContent = "Remove";
-      removeBtn.addEventListener("click", () => removeBook(index));
-
-      li.appendChild(removeBtn);
-      ul.appendChild(li);
-    });
-
-    booksDiv.appendChild(ul);
-  }
-}
+//
 
 /**
  * Function to update the stored books in local storage.

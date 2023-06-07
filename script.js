@@ -2,7 +2,7 @@
 let books = [];
 
 // Retrieve stored books from local storage
-const storedBooks = localStorage.getItem("books");
+const storedBooks = localStorage.getItem('books');
 if (storedBooks) {
   books = JSON.parse(storedBooks);
 }
@@ -11,7 +11,7 @@ if (storedBooks) {
  * Function to update the stored books in local storage.
  */
 function updateLocalStorage() {
-  localStorage.setItem("books", JSON.stringify(books));
+  localStorage.setItem('books', JSON.stringify(books));
 }
 
 /**
@@ -28,22 +28,22 @@ function displayBooks() {
     updateLocalStorage();
   }
 
-  const booksDiv = document.getElementById("books");
-  booksDiv.innerHTML = "";
+  const booksDiv = document.getElementById('books');
+  booksDiv.innerHTML = '';
 
   if (books.length === 0) {
-    booksDiv.innerHTML = "<p>No books found.</p>";
+    booksDiv.innerHTML = '<p>No books found.</p>';
   } else {
-    const ul = document.createElement("ul");
+    const ul = document.createElement('ul');
 
     books.forEach((book, index) => {
-      const li = document.createElement("li");
+      const li = document.createElement('li');
       li.textContent = `${book.title} by ${book.author}`;
 
-      const removeBtn = document.createElement("button");
-      removeBtn.type = "button";
-      removeBtn.textContent = "Remove";
-      removeBtn.addEventListener("click", () => {
+      const removeBtn = document.createElement('button');
+      removeBtn.type = 'button';
+      removeBtn.textContent = 'Remove';
+      removeBtn.addEventListener('click', () => {
         removeBook(index);
       });
 
@@ -68,9 +68,9 @@ function addBook(title, author) {
 }
 
 // Event listener for add button
-document.getElementById("addButton").addEventListener("click", () => {
-  const title = document.getElementById("title").value;
-  const author = document.getElementById("author").value;
+document.getElementById('addButton').addEventListener('click', () => {
+  const title = document.getElementById('title').value;
+  const author = document.getElementById('author').value;
   addBook(title, author);
 });
 

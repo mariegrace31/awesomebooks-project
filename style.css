@@ -9,11 +9,11 @@ input {
 }
 
 #addButton {
-  width: 4%;
+  width: 80px;
   background-color: #fff;
 }
 
-#books ul li{
+#books ul li {
   display: flex;
   flex-direction: column;
   gap: 15px;

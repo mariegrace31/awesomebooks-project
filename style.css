@@ -1,25 +1,84 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 35%;
+}
+
+.book-underline {
+  width: 20%;
+  border: 1px solid black;
+}
+
 form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+  align-items: center;
 }
 
 input {
-  width: 12%;
+  width: 50%;
 }
 
 #addButton {
-  width: 80px;
-  background-color: #fff;
+  width: 60px;
+  background-color: #b4cadd;
+  margin-left: 200px;
+}
+
+#books ul {
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  width: 100%;
 }
 
 #books ul li {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#books ul li:nth-child(1),
+#books ul li:nth-child(3),
+#books ul li:nth-child(5) {
+  background-color: #b8b0b0;
+}
+
+#books ul li:nth-child(2),
+#books ul li:nth-child(4),
+#books ul li:nth-child(6) {
+  background-color: #b4cadd;
 }
 
 button {
-  width: 5%;
+  width: 20%;
   font-size: 12px;
+  border: 2px solid black;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  #addButton {
+    margin-left: 190px;
+  }
+
+  input {
+    width: 65%;
+  }
+
+  #books ul {
+    width: 90%;
+  }
 }

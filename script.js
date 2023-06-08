@@ -1,78 +1,100 @@
-// Array to store the books
-let books = [];
-
-// Retrieve stored books from local storage
-const storedBooks = localStorage.getItem('books');
-if (storedBooks) {
-  books = JSON.parse(storedBooks);
-}
-
-/**
- * Function to update the stored books in local storage.
- */
-function updateLocalStorage() {
-  localStorage.setItem('books', JSON.stringify(books));
-}
-
-/**
- * Function to display the books in the UI.
- */
-function displayBooks() {
-  /**
-   * Function to remove a book from the collection.
-   * @param {number} index - The index of the book to remove.
-   */
-  function removeBook(index) {
-    books.splice(index, 1);
-    displayBooks();
-    updateLocalStorage();
+// Create a class called BookCollection to manage the books
+class BookCollection {
+  // The constructor is called when creating an instance of the class
+  constructor() {
+    // Initialize the books array by retrieving the stored books from local storage
+    this.books = this.retrieveBooksFromLocalStorage();
+    // Display the books in the UI
+    this.displayBooks();
   }
 
-  const booksDiv = document.getElementById('books');
-  booksDiv.innerHTML = '';
+  // Arrow function to retrieve the books from local storage
+  retrieveBooksFromLocalStorage = () => {
+    // Retrieve the stored books from local storage
+    const storedBooks = localStorage.getItem('books');
+    return storedBooks ? JSON.parse(storedBooks) : [];
+  };
 
-  if (books.length === 0) {
-    booksDiv.innerHTML = '<p>No books found.</p>';
-  } else {
-    const ul = document.createElement('ul');
+  // Method to update the stored books in local storage
+  updateLocalStorage() {
+    // Convert the books array to JSON and store it in the 'books' key of local storage
+    localStorage.setItem('books', JSON.stringify(this.books));
+  }
 
-    books.forEach((book, index) => {
-      const li = document.createElement('li');
-      li.textContent = `${book.title} by ${book.author}`;
+  // Method to display the books in the UI
+  displayBooks() {
+    // Get the DOM element for the books container
+    const booksDiv = document.getElementById('books');
+    // Clear the books container
+    booksDiv.innerHTML = '';
 
-      const removeBtn = document.createElement('button');
-      removeBtn.type = 'button';
-      removeBtn.textContent = 'Remove';
-      removeBtn.addEventListener('click', () => {
-        removeBook(index);
+    // Check if there are any books
+    if (this.books.length === 0) {
+      // If there are no books, display a message indicating so
+      booksDiv.innerHTML = '<p>No books found.</p>';
+    } else {
+      // If there are books, create an unordered list element
+      const ul = document.createElement('ul');
+
+      // Iterate over each book in the books array
+      this.books.forEach((book, index) => {
+        // Create a list item element to display the book details
+        const li = document.createElement('li');
+        li.textContent = `${book.title} by ${book.author}`;
+
+        // Create a remove button for each book
+        const removeBtn = document.createElement('button');
+        removeBtn.type = 'button';
+        removeBtn.textContent = 'Remove';
+
+        // Add an event listener to the remove button to handle book removal
+        removeBtn.addEventListener('click', () => {
+          // Call the removeBook method, passing the index of the book to remove
+          this.removeBook(index);
+        });
+
+        // Append the remove button to the list item
+        li.appendChild(removeBtn);
+        // Append the list item to the unordered list
+        ul.appendChild(li);
       });
 
-      li.appendChild(removeBtn);
-      ul.appendChild(li);
-    });
+      // Append the unordered list to the books container
+      booksDiv.appendChild(ul);
+    }
+  }
 
-    booksDiv.appendChild(ul);
+  // Method to add a new book to the collection
+  addBook(title, author) {
+    // Create a book object with the given title and author
+    const book = { title, author };
+    // Add the book object to the books array
+    this.books.push(book);
+    // Display the updated list of books in the UI
+    this.displayBooks();
+    // Update the stored books in local storage
+    this.updateLocalStorage();
+  }
+
+  // Method to remove a book from the collection
+  removeBook(index) {
+    // Remove the book at the specified index from the books array
+    this.books.splice(index, 1);
+    // Display the updated list of books in the UI
+    this.displayBooks();
+    // Update the stored books in local storage
+    this.updateLocalStorage();
   }
 }
 
-/**
- * Function to add a new book to the collection.
- * @param {string} title - The title of the book.
- * @param {string} author - The author of the book.
- */
-function addBook(title, author) {
-  const book = { title, author };
-  books.push(book);
-  displayBooks();
-  updateLocalStorage();
-}
+// Create an instance of the BookCollection class to manage the books
+const bookCollection = new BookCollection();
 
-// Event listener for add button
+// Add an event listener to the add button
 document.getElementById('addButton').addEventListener('click', () => {
+  // Get the values of the title and author inputs
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
-  addBook(title, author);
+  // Call the addBook method of the bookCollection instance, passing the title and author
+  bookCollection.addBook(title, author);
 });
-
-// Initial display of books
-displayBooks();

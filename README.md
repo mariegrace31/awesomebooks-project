@@ -6,6 +6,7 @@
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Key Features](#key-features)
+    - [future features](#future-features)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -13,6 +14,7 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
+- [License](#License)
 
 <!-- PROJECT DESCRIPTION -->
 
@@ -28,6 +30,9 @@ Vs Code using HTML, CSS and JavaScript.
 - [Feature_2]: Add an array to store the books
 - [Feature_3]: Add a new book to the collection, with title and author.
 - [Feature_4]: preserve data in browser's memory by using localStorage
+
+### Future Features <a name="future-features"></a>
+- [Feature_1]:  complete the website with navigation links
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -62,7 +67,7 @@ Install this project with: cd awesomebooks-project npm install
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome! And here is the link to the "issues" section:https://github.com/mariegrace31/awesomebooks-project/issues
+Contributions, issues, and feature requests are welcome! And here is the link to the "issues" section: https://github.com/mariegrace31/awesomebooks-project/issues
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -80,4 +85,10 @@ If you like this project, don't hesitate to show your support by liking it.
 
 We would like to thank Microverse for giving us this opportunity, and you too for the time you took going through this project.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./MIT.md) licensed.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

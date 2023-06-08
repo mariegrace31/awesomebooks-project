@@ -67,7 +67,7 @@ Install this project with: cd awesomebooks-project npm install
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome! And here is the link to the "issues" section:https://github.com/mariegrace31/awesomebooks-project/issues
+Contributions, issues, and feature requests are welcome! And here is the link to the "issues" section: https://github.com/mariegrace31/awesomebooks-project/issues
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

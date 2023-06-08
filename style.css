@@ -6,11 +6,11 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 35%;
+  width: 100%;
 }
 
 .book-underline {
-  width: 20%;
+  width: 10%;
   border: 1px solid black;
 }
 
@@ -22,13 +22,13 @@ form {
 }
 
 input {
-  width: 50%;
+  width: 15%;
 }
 
 #addButton {
   width: 60px;
   background-color: #b4cadd;
-  margin-left: 200px;
+  margin-left: 165px;
 }
 
 #books ul {
@@ -37,7 +37,9 @@ input {
   flex-direction: column;
   gap: 5px;
   padding: 8px;
-  width: 100%;
+  width: 35%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #books ul li {

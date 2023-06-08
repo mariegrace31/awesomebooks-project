@@ -38,14 +38,52 @@ class BooksCollection {
         const ul = document.createElement('ul');
 
         //Iterate over each book in the array
-        this.books.forEach(book, index) => {
+        this.books.forEach((book, index) =>{ 
           //Create a list item element to display the book details
           const li = document.createElement('li');
           li.textContent = `${book.title} by ${book.author}`;
 
           //Create a remove button for each book
-        }); 
-      }
+          const removeButton = document.createElement('button');
+          removeButton.type = 'button';
+          removeButton.textContent = 'Remove';
 
+          // Add an event listener to the remove button to handle book removal
+          removeButton.addEventListener('click', () => {
+            this.removeBook (index);
+          });
+          li.appendChild(removeButton);
+          ul.appendChild (li);
+        });
+        booksDiv.appendChild (ul); 
+      }
     }
+    // A method to add a new book to the collection
+    addBook(title, author){
+      // create a book object with a given title and author
+      const book = {
+        title, author
+      };
+      this.books.push (book);
+      this.displayBooks ();
+      this.updateLocalStorage();
+    }
+
+  // create a method to remove the book from the collection
+  removeBook(index){
+    this.books.splice (index, 1);
+    this.displayBooks ();
+    this.updateLocalStorage();
+  }
 }
+
+// create an instance of the bookCollection class to manage the books
+const bookCollection = new BooksCollection();
+// Add an event listener to the add button
+document.getElementById('addButton').addEventListener('click', () =>{
+  const title = document.getElementById ('title').value;
+  const author = document.getElementById ('auhtor').value;
+  bookCollection.addBook(title, author);
+})
+
+

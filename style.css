@@ -5,8 +5,37 @@
 body {
   display: flex;
   flex-direction: column;
-  text-align: center;
   width: 100%;
+}
+
+.header {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 15px;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+a,
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
 }
 
 .book-underline {
@@ -65,6 +94,17 @@ button {
   font-size: 12px;
   border: 2px solid black;
   border-radius: 6px;
+}
+
+#contact {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 15px;
 }
 
 @media screen and (max-width: 768px) {

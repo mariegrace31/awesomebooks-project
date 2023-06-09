@@ -11,26 +11,53 @@
 
 <body>
 
+  <section class="header">
     <header>
+      <nav>
+        <a href="#">Awesome books</a>
+        <ul>
+          <li><a href="#books">List</a></li>
+          <li><a href="#new">Add new</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+   </header>
+  
+   <main>
+   
+      <div id="books">
         <h1>All awesome books</h1>
-    </header>
-
-    <main>
-
-        <div id="books"></div>
-        <hr class="book-underline">
+      </div>
+      <div id="new">
         <h2>Add a new book</h2>
-        <form>
-            <label for="title"></label>
-            <input type="text" id="title" placeholder="Title" required>
+      <form>
+          <label for="title"></label>
+          <input type="text" id="title" placeholder="Title" required>
+   
+          <label for="author"></label>
+          <input type="text" id="author" placeholder="Author" required>
+   
+          <button type="button" id="addButton">Add</button>
+      </form>
+   
+      </div>
+   </main>
+   </section>
+      
+   <section id="contact">
+    <h2>Contact information</h2>
+    <p>Do you have any questions or you just want to say "hello"? 
+    <br> You can reach out to us!</p>
+    <ul>
+      <li>Our e-mail: mail@gmail.com</li>
+      <li>Our phone number: 0043586534422</li>
+      <li>Our adrss: Streetname 22, 84503 City, country</li>
+    </ul>
+   </section>
 
-            <label for="author"></label>
-            <input type="text" id="author" placeholder="Author" required>
-
-            <button type="button" id="addButton">Add</button>
-        </form>
-
-    </main>
+   <footer>
+    <p>Copyright ...</p>
+   </footer>
 
     <script src="script.js"></script>
 </body>

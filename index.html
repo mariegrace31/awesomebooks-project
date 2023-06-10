@@ -2,64 +2,72 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Books</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awesome Books</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <section class="header">
-    <header>
-      <nav>
-        <a href="#">Awesome books</a>
-        <ul>
-          <li><a href="#books">List</a></li>
-          <li><a href="#new">Add new</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-   </header>
-  
-   <main>
-   
+
+  <header class="navbar">
+    <h1 class="navHeading">Awesome books</h1>
+    <nav>
+      <ul class="links">
+        <li class="link"><a href="#header">List</a></li>
+        <li class="link"><a href="#new">Add new</a></li>
+        <li class="link"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="time">
+    <p id="time"></p>
+  </section>
+
+  <main>
+
+    <section id="header">
+      <h1>All awesome books</h1>
       <div id="books">
-        <h1>All awesome books</h1>
       </div>
-      <div id="new">
-        <h2>Add a new book</h2>
+    </section>
+
+    <section id="new">
+      <h2>Add a new book</h2>
       <form>
-          <label for="title"></label>
-          <input type="text" id="title" placeholder="Title" required>
-   
-          <label for="author"></label>
-          <input type="text" id="author" placeholder="Author" required>
-   
-          <button type="button" id="addButton">Add</button>
+        <label for="title"></label>
+        <input type="text" id="title" placeholder="Title" required>
+
+        <label for="author"></label>
+        <input type="text" id="author" placeholder="Author" required>
+
+        <button type="button" id="addButton">Add</button>
       </form>
-   
-      </div>
-   </main>
-   </section>
-      
-   <section id="contact">
-    <h2>Contact information</h2>
-    <p>Do you have any questions or you just want to say "hello"? 
-    <br> You can reach out to us!</p>
-    <ul>
-      <li>Our e-mail: mail@gmail.com</li>
-      <li>Our phone number: 0043586534422</li>
-      <li>Our adrss: Streetname 22, 84503 City, country</li>
-    </ul>
-   </section>
 
-   <footer>
-    <p>Copyright ...</p>
-   </footer>
+    </section>
 
-    <script src="script.js"></script>
+
+    <section id="contact">
+      <h2>Contact information</h2>
+      <p>Do you have any questions or you just want to say "hello"?
+        <br> You can reach out to us!
+      </p>
+      <ul>
+        <li>Our e-mail: mail@gmail.com</li>
+        <li>Our phone number: 0043586534422</li>
+        <li>Our adrss: Streetname 22, 84503 City, country</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Copyright ...</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 
 </html>

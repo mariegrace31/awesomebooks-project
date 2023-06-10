@@ -42,8 +42,16 @@ class BookCollection {
         const li = document.createElement('li');
         li.textContent = `${book.title} by ${book.author}`;
 
+        // Add alternating background colors to the list items
+        if (index % 2 === 0) {
+          li.classList.add('even');
+        } else {
+          li.classList.add('odd');
+        }
+
         // Create a remove button for each book
         const removeBtn = document.createElement('button');
+        removeBtn.classList.add('removeButton');
         removeBtn.type = 'button';
         removeBtn.textContent = 'Remove';
 
@@ -98,3 +106,49 @@ document.getElementById('addButton').addEventListener('click', () => {
   // Call the addBook method of the bookCollection instance, passing the title and author
   bookCollection.addBook(title, author);
 });
+
+// Get the time element
+const timeElement = document.getElementById('time');
+
+// Function to update the time
+function updateTime() {
+  const currentTime = new Date();
+  const day = currentTime.getDay();
+  const month = currentTime.toLocaleString('default', { month: 'long' });
+  const year = currentTime.getFullYear();
+  let hours = currentTime.getHours();
+  const minutes = currentTime.getMinutes();
+  const seconds = currentTime.getSeconds();
+
+  // Get the appropriate suffix for the day
+  let daySuffix = 'th';
+  if (day === 1 || day === 21 || day === 31) {
+    daySuffix = 'st';
+  } else if (day === 2 || day === 22) {
+    daySuffix = 'nd';
+  } else if (day === 3 || day === 23) {
+    daySuffix = 'rd';
+  }
+
+  // Convert hours to 12-hour format and determine AM/PM
+  let ampm = '';
+  if (hours >= 12) {
+    ampm = 'pm';
+  } else {
+    ampm = 'am';
+  }
+  if (hours > 12) {
+    hours -= 12;
+  }
+
+  const displayedTime = `${month} ${day}${daySuffix}  ${year}, ${hours}:${minutes}:${seconds} ${ampm}`;
+
+  // Update the time element
+  timeElement.textContent = displayedTime;
+}
+
+// Call the updateTime function to display the current time
+updateTime();
+
+// Update the time every second
+setInterval(updateTime, 1000);

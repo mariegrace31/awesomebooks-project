@@ -10,19 +10,18 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #e8e8e8;
-  margin: 1em;
 }
 
 .navbar {
   display: flex;
   text-align: center;
   justify-content: space-between;
-  border: 4px solid #000;
-  margin: 1em;
+  border: 6px solid #000;
   align-items: center;
   position: fixed;
   width: 100%;
-  max-width: 1000px;
+  max-width: auto;
+  background-color: #fff;
 }
 
 .link:nth-child(1) {
@@ -62,7 +61,6 @@ nav ul li a {
   align-items: center;
   padding-top: 100px;
   height: 100vh;
-  /* background-color: red; */
   width: 100vw;
 }
 
@@ -80,8 +78,7 @@ nav ul li a {
 }
 
 .time p {
-  padding: 0.3em;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
 }
 
@@ -89,7 +86,7 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 70vh;
+  height: 100vh;
   width: 100%;
   margin: 1em;
 }
@@ -97,27 +94,28 @@ nav ul li a {
 
 
 #books ul {
-  border: 3px solid black;
+  border: 6px solid black;
   display: flex;
   flex-direction: column;
   gap: 5px;
   padding: 8px;
   margin-right: auto;
   margin-left: auto;
-  height: 80vh;
+  min-height: 50vh;
+  height: auto;
   width: 97%;
-  /* background-color: lime; */
 }
 
 #books ul li {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 30px;
+  height: 50px;
+  font-size: 20px;
 }
 
 .even {
-  background-color: rgb(189, 189, 189);
+  background-color: #b4cadd;
 }
 
 .odd {
@@ -125,16 +123,36 @@ nav ul li a {
 }
 
 .removeButton {
+  font-size: 15px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   border-right: 8px solid black;
   border-bottom: 5px solid black;
 }
 
+.removeButton:hover {
+  background-color: #b4cadd;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 18px;
+  transition: 0.5s;
+}
 
 
 .book-underline {
   width: 10%;
   border: 1px solid black;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  width: 100%;
+  margin: 1em;
+  font-size: 25px;
 }
 
 
@@ -151,9 +169,11 @@ input {
 }
 
 #addButton {
-  width: 60px;
+  width: 100px;
+  height: 40px;
+  border: 4px solid black;
   background-color: #b4cadd;
-  margin-left: 165px;
+  align-self: flex-end;
 }
 
 
@@ -165,13 +185,35 @@ button {
   border-radius: 6px;
 }
 
-#contact {
-  margin-left: auto;
-  margin-right: auto;
+#new {
+  height: 65vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
 
+#new h2 {
+  margin-bottom: 1em;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+#new form input {
+  width: 50vh;
+  height: 5em;
+  border: 8px solid black;
+}
+
+form:last-child {
+  justify-content: flex-end;
+}
+
+
 footer {
-  border: 4px solid black;
+  border: 6px solid black;
   padding: 10px;
   position: sticky;
   bottom: 0;
@@ -185,10 +227,6 @@ footer {
 @media screen and (max-width: 768px) {
   body {
     width: 100%;
-  }
-
-  #addButton {
-    margin-left: 190px;
   }
 
   input {

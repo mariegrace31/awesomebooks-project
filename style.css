@@ -20,7 +20,6 @@ body {
   align-items: center;
   position: fixed;
   width: 100%;
-  max-width: auto;
   background-color: #fff;
 }
 
@@ -91,8 +90,6 @@ nav ul li a {
   margin: 1em;
 }
 
-
-
 #books ul {
   border: 6px solid black;
   display: flex;
@@ -138,7 +135,6 @@ nav ul li a {
   transition: 0.5s;
 }
 
-
 .book-underline {
   width: 10%;
   border: 1px solid black;
@@ -154,8 +150,6 @@ nav ul li a {
   margin: 1em;
   font-size: 25px;
 }
-
-
 
 form {
   display: flex;
@@ -176,8 +170,6 @@ input {
   align-self: flex-end;
 }
 
-
-
 button {
   width: 20%;
   font-size: 12px;
@@ -192,7 +184,6 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
 #new h2 {
@@ -210,7 +201,6 @@ button {
 form:last-child {
   justify-content: flex-end;
 }
-
 
 footer {
   border: 6px solid black;

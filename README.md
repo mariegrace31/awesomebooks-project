@@ -31,7 +31,7 @@ Vs Code using HTML, CSS and JavaScript.
 - [Feature_3]: Add a new book to the collection, with title and author.
 - [Feature_4]: preserve data in browser's memory by using localStorage
 
-### Future Features <a name="future-features"></a>
+## Future Features <a name="future-features"></a>
 - [Feature_1]:  complete the website with navigation links
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
